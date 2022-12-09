@@ -20,7 +20,7 @@ body {
   grid-template-columns: repeat(var(--rows), 1fr);
 }
 .board {
-  background-color: white;
+  background-color: var(--color);
 }
 .board-hover {
   background-color: var(--color);

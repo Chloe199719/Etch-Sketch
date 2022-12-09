@@ -1,19 +1,22 @@
+// Setting Variables
 let square = 16;
 let squares = square * square;
+
+//  Dom Elements
 document.documentElement.style.setProperty(`--rows`, square);
 const box = document.querySelector(`.box`);
 const rows = document.querySelector(`#rows`);
 const updateBtn = document.querySelector(`.update`);
 const valueUpdate = document.querySelector(`.value`);
 const colorPicker = document.querySelector(`#favcolor`);
+const colorPicker1 = document.querySelector(`#background`);
+
+// Mouse fixer
 let mouseDown = false;
 document.body.onmousedown = () => (mouseDown = true);
 document.body.onmouseup = () => (mouseDown = false);
-// const div = document.createElement(`div`);
-// box.appendChild(div);
-// box.appendChild(div);
-// box.appendChild(div);
-// console.log(div);
+
+//Update / Restart button for now
 const handleUpdate = function () {
   document.documentElement.style.setProperty(`--rows`, rows.value);
   document.querySelectorAll(`.board`).forEach((e) => e.remove());
@@ -21,15 +24,16 @@ const handleUpdate = function () {
   eventupdate();
 };
 
+// Display selected grid size
 const changeGridSize = function () {
   valueUpdate.textContent = rows.value;
 };
-
+// Event listeners for User Inputs
 rows.addEventListener(`change`, changeGridSize);
 
 updateBtn.addEventListener(`click`, handleUpdate);
-// rows.addEventListener(`mousemove`, handleUpdate);
 
+// Draws the s number of dives
 const divs = function (s) {
   for (let i = 0; i < s; i++) {
     const div = document.createElement(`div`);
@@ -40,6 +44,7 @@ const divs = function (s) {
 
 divs(squares);
 
+// Create event for mouse drawing
 const eventupdate = function () {
   const test = document.querySelectorAll(`.board`);
   const loop = function (e) {
@@ -57,6 +62,6 @@ const eventupdate = function () {
 };
 eventupdate();
 
-colorPicker.addEventListener(`change`, function (e) {
+colorPicker1.addEventListener(`change`, function (e) {
   document.documentElement.style.setProperty(`--color`, this.value);
 });
