@@ -44,7 +44,9 @@ const eventupdate = function () {
   const test = document.querySelectorAll(`.board`);
   const loop = function (e) {
     if (e.type === `mouseover` && !mouseDown) return;
-    this.classList.add(`board-hover`);
+    // this.classList.add(`board-hover`);
+    this.style.background = `${colorPicker.value}`;
+    console.log(this.style.color);
   };
   test.forEach((t) => {
     t.addEventListener(`mousedown`, loop);
