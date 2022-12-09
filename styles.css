@@ -1,0 +1,27 @@
+:root {
+  --rows: 1;
+  --color: white;
+}
+p,
+label {
+  color: white;
+}
+body {
+  /* display: flex; */
+  align-content: center;
+  justify-content: center;
+  height: 1vw;
+}
+.box {
+  width: 480px;
+  background-color: gray;
+  height: 480px;
+  display: grid;
+  grid-template-columns: repeat(var(--rows), 1fr);
+}
+.board {
+  background-color: aqua;
+}
+.board-hover {
+  background-color: var(--color);
+}
