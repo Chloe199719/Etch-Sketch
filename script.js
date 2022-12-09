@@ -10,6 +10,8 @@ const updateBtn = document.querySelector(`.update`);
 const valueUpdate = document.querySelector(`.value`);
 const colorPicker = document.querySelector(`#favcolor`);
 const colorPicker1 = document.querySelector(`#background`);
+const eraseBtn = document.querySelector(`.erase`);
+const drawBtn = document.querySelector(`.draw`);
 
 // Mouse fixer
 let mouseDown = false;
@@ -65,3 +67,22 @@ eventupdate();
 colorPicker1.addEventListener(`change`, function (e) {
   document.documentElement.style.setProperty(`--color`, this.value);
 });
+
+// Erase button
+eraseBtn.addEventListener(`click`, function (e) {
+  const d = document.querySelectorAll(`.board`);
+  const loop = function (e) {
+    if (e.type === `mouseover` && !mouseDown) return;
+    this.style.removeProperty(`background`);
+  };
+  d.forEach((t) => {
+    t.addEventListener(`mousedown`, loop);
+  });
+  d.forEach((t) => {
+    t.addEventListener(`mouseover`, loop);
+  });
+});
+
+// Draw Button
+
+drawBtn.addEventListener(`click`, eventupdate);
