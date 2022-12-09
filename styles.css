@@ -2,6 +2,17 @@
   --rows: 1;
   --color: white;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+main {
+  display: grid;
+  justify-content: center;
+}
 p,
 label {
   color: white;
@@ -11,6 +22,13 @@ body {
   align-content: center;
   justify-content: center;
   height: 1vw;
+  background-color: black;
+  color: white;
+}
+h1 {
+  font-size: 60px;
+  text-align: center;
+  padding: 40px 0;
 }
 .box {
   width: 480px;
@@ -18,10 +36,21 @@ body {
   height: 480px;
   display: grid;
   grid-template-columns: repeat(var(--rows), 1fr);
+  border: 1px orange solid;
+  box-shadow: 5px 11px 20px rgba(231, 120, 6, 0.2);
+  margin: 40px 0;
 }
 .board {
   background-color: var(--color);
 }
 .board-hover {
   background-color: var(--color);
+}
+.number {
+  display: grid;
+  grid-auto-flow: column;
+}
+#rows,
+.value {
+  margin: 20px;
 }
