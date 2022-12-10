@@ -24,6 +24,13 @@ body {
   height: 1vw;
   background: #4a4a4a;
   color: white;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
 }
 h1 {
   font-size: 60px;
@@ -82,4 +89,12 @@ input[type="color"]::-webkit-color-swatch {
 .drawbuttons button {
   width: 50%;
   height: 40px;
+}
+footer {
+  background-color: #1f2937;
+  padding: 35px;
+}
+footer p {
+  text-align: center;
+  color: #e5e7eb;
 }
