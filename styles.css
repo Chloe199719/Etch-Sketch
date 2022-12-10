@@ -22,7 +22,7 @@ body {
   align-content: center;
   justify-content: center;
   height: 1vw;
-  background-color: black;
+  background: #4a4a4a;
   color: white;
 }
 h1 {
@@ -53,4 +53,32 @@ h1 {
 #rows,
 .value {
   margin: 20px;
+}
+.colorselector {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  margin: 40px 0px;
+  font-size: 20px;
+}
+
+.colorselector input {
+  width: 100px;
+  height: 100px;
+  background-color: #4a4a4a;
+}
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 50px;
+  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+}
+
+.drawbuttons {
+  display: flex;
+}
+.drawbuttons button {
+  width: 50%;
+  height: 40px;
 }

@@ -18,7 +18,7 @@
             type="range"
             name="spacing"
             min="10"
-            max="200"
+            max="100"
             value="16"
             data-sizing="px"
           />
@@ -26,11 +26,22 @@
           <!-- <input type="number" name="abc" id="rows" value="16" min="10" max="100" /> -->
           <button class="update">Update</button>
         </div>
-        <label for="favcolor">Color Selector:</label>
-        <input type="color" id="favcolor" name="favcolor" value="#ff0000" />
-        <input type="color" id="background" name="favcolor" value="#ffffff" />
-        <button class="erase">Erase</button>
-        <button class="draw">Draw</button>
+        <div class="colorselector">
+          <label for="favcolor">Color Selector:</label>
+          <input type="color" id="favcolor" name="favcolor" value="#000000" />
+          <label for="color">Background Color Selector:</label>
+          <input
+            type="color"
+            id="background"
+            name="background-color"
+            value="#ffffff"
+          />
+        </div>
+
+        <div class="drawbuttons">
+          <button class="erase">Erase</button>
+          <button class="draw">Draw</button>
+        </div>
       </div>
       <script src="script.js"></script>
     </main>

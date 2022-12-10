@@ -32,6 +32,7 @@ const changeGridSize = function () {
 };
 // Event listeners for User Inputs
 rows.addEventListener(`change`, changeGridSize);
+rows.addEventListener(`mousemove`, changeGridSize);
 
 updateBtn.addEventListener(`click`, handleUpdate);
 
