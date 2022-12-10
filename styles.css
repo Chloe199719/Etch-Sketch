@@ -49,6 +49,7 @@ h1 {
 }
 .board {
   background-color: var(--color);
+  cursor: url("img1.png"), auto;
 }
 .board-hover {
   background-color: var(--color);
@@ -89,6 +90,7 @@ input[type="color"]::-webkit-color-swatch {
 .drawbuttons button {
   width: 50%;
   height: 40px;
+  cursor: url("img1.png"), auto;
 }
 footer {
   background-color: #1f2937;

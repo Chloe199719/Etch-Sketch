@@ -12,6 +12,7 @@ const colorPicker = document.querySelector(`#favcolor`);
 const colorPicker1 = document.querySelector(`#background`);
 const eraseBtn = document.querySelector(`.erase`);
 const drawBtn = document.querySelector(`.draw`);
+const yeartxt = document.querySelector(`#year`);
 
 // Mouse fixer
 let mouseDown = false;
@@ -87,3 +88,10 @@ eraseBtn.addEventListener(`click`, function (e) {
 // Draw Button
 
 drawBtn.addEventListener(`click`, eventupdate);
+
+// date
+
+const now = new Date();
+const yearNow = now.getFullYear();
+
+yeartxt.textContent = yearNow;
